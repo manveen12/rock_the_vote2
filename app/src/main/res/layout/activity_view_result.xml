@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/crowdm"
+    tools:context="com.example.admin.myapplication.ViewResult">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a216251a">
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock The Vote"
+        android:textStyle="italic"
+        android:textSize="40dp"
+        android:textColor="#5ddfd0"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/text1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:text="your vote is your voice"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/text2"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/text2"
+    android:text="Results"
+    android:textColor="#5ddfd0"
+    android:textSize="30dp"
+    android:layout_centerInParent="true"
+        android:id="@+id/text3"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:text="poll question:"
+        android:textColor="#5ddfd0"
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>

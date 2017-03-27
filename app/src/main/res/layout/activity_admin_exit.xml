@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_poll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/crowdm"
+    tools:context="com.example.admin.myapplication.AddPoll">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a216251a">
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Entered Successfully!"
+        android:textSize="50dp"
+       android:layout_centerInParent="true"
+        android:textColor="#5ddfd0"
+        android:layout_margin="40dp"
+        android:id="@+id/data"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:layout_centerInParent="true"
+        android:text="go to home page"
+        android:textColor="#fff"
+        android:id="@+id/home_btn"
+        android:layout_below="@id/data"/>
+
+    </RelativeLayout>

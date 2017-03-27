@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_admin_options"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@drawable/crowdm"
+    tools:context="com.example.admin.myapplication.AdminOptions">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a216251a">
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock The Vote"
+        android:textStyle="italic"
+        android:textSize="40dp"
+        android:textColor="#5ddfd0"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:id="@+id/text1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:text="your vote is your voice"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/textt"
+        />
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonrec"
+        android:layout_centerInParent="true"
+        android:text="Add poll"
+        android:textColor="#000"
+        android:id="@+id/addpoll"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonrec"
+        android:layout_centerInParent="true"
+        android:text="Change setting for poll"
+        android:textColor="#000"
+        android:id="@+id/settingpoll"
+        android:layout_below="@id/addpoll"
+        android:layout_margin="20dp"
+        />
+    <Button
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buttonrec"
+    android:layout_centerInParent="true"
+    android:text="go to home page"
+    android:textColor="#000"
+    android:id="@+id/home_btn"
+    android:layout_below="@id/settingpoll"/>
+</RelativeLayout>
+
+
