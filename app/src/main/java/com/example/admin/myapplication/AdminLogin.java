@@ -57,7 +57,7 @@ public class AdminLogin extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jobjreq = new JsonObjectRequest("http://192.168.1.102/rock_the_vote/admin_login.php", job,
+        JsonObjectRequest jobjreq = new JsonObjectRequest("http://192.168.0.44/rock_the_vote/admin_login.php", job,
 
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -66,7 +66,12 @@ public class AdminLogin extends AppCompatActivity {
                         try {
                             if (response.getString("key").equals("done")) {
 
-                            } else {
+                                    Intent i = new Intent(AdminLogin.this, AdminOptions.class);
+                                    startActivity(i);
+
+
+                            } else
+                            {
                                 Toast.makeText(AdminLogin.this, "error", Toast.LENGTH_SHORT).show();
                                 return;
                             }
@@ -86,14 +91,11 @@ public class AdminLogin extends AppCompatActivity {
         AppController app = new AppController(AdminLogin.this);
         app.addToRequestQueue(jobjreq);
 
-        {
-            Intent i = new Intent(AdminLogin.this, AdminOptions.class);
-            startActivity(i);
-        }
+
 
     }
 
-    ;
+
 
     public void opensignup(View v) {
         Intent i = new Intent(AdminLogin.this, AdminSignup.class);

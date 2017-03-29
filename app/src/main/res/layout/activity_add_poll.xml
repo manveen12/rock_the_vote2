@@ -4,7 +4,7 @@
     android:id="@+id/activity_add_poll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-      android:background="@drawable/crowdm"
+    android:background="@drawable/rock"
     tools:context="com.example.admin.myapplication.AddPoll">
 <RelativeLayout
     android:layout_width="match_parent"
@@ -71,7 +71,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="select options:"
+        android:text="Fill options:"
         android:textSize="20dp"
         android:textColor="#fdfbfb"
         android:layout_marginTop="40dp"
@@ -79,6 +79,78 @@
         android:layout_below="@id/ques"
         android:layout_marginLeft="10dp"
         />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative"
+        android:background="@drawable/rectangle"
+        android:layout_below="@+id/option"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chk1"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chk1"
+            android:background="@drawable/rectangle"
+            android:layout_margin="15dp"
+            android:id="@+id/edit1"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chk2"
+            android:layout_below="@id/chk1"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chk2"
+            android:layout_below="@+id/edit1"
+            android:background="@drawable/rectangle"
+            android:layout_margin="15dp"
+            android:id="@+id/edit2"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chk3"
+            android:layout_below="@id/chk2"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chk3"
+            android:layout_below="@+id/edit2"
+            android:background="@drawable/rectangle"
+            android:layout_margin="15dp"
+            android:id="@+id/edit4"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chk4"
+            android:layout_below="@id/chk3"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chk4"
+            android:layout_below="@+id/edit4"
+            android:background="@drawable/rectangle"
+            android:layout_margin="15dp"
+            />
+    </RelativeLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -86,5 +158,6 @@
         android:layout_centerInParent="true"
         android:id="@+id/submit"
         android:background="@drawable/rectangle"
-        android:text="submit"/>
+        android:text="submit"
+        android:layout_below="@+id/relative"/>
 </RelativeLayout>

@@ -9,8 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+
+
 public class AddPoll extends AppCompatActivity {
-    EditText pollBox,quesBox;
+    EditText pollBox, quesBox, edit1Box, edit2Box, edit3Box, edit4Box;
     Button submitBox;
 
     @Override
@@ -21,32 +32,8 @@ public class AddPoll extends AppCompatActivity {
 
         quesBox = (EditText) findViewById(R.id.ques);
 
+
         submitBox = (Button) findViewById(R.id.submit);
-
-        View.OnClickListener btn_click = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String poll = pollBox.getText().toString();
-                String ques = quesBox.getText().toString();
-
-
-
-                if(!poll.equals("") && !ques.equals(""))
-                {
-                    Intent i = new Intent(AddPoll.this , AdminExit.class);
-
-                    startActivity(i);
-
-                    finish();
-                }
-                else {
-                    Toast.makeText(AddPoll.this,"enter input",Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
-
-        submitBox.setOnClickListener(btn_click);
 
     }
 }

@@ -10,16 +10,12 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/crowdm"
+        android:src="@drawable/welcome"
         android:scaleType="centerCrop"
         android:id="@+id/imageView"
         />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#5adad279">
 
-    </RelativeLayout>
+
 
 </RelativeLayout>

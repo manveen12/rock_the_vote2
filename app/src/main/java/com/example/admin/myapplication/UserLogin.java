@@ -67,8 +67,11 @@ public class UserLogin extends AppCompatActivity {
                         try {
                             if(response.getString("key").equals("done"))
                             {
+                                Intent i = new Intent(UserLogin.this, userSignup.class);
+                                startActivity(i);
 
                             }
+
                             else {
                                 Toast.makeText(UserLogin.this , "error" , Toast.LENGTH_SHORT).show();
                                 return;
@@ -98,11 +101,7 @@ public class UserLogin extends AppCompatActivity {
 
     ;
 
-    public void opensignup(View v) {
-        Intent i = new Intent(UserLogin.this, userSignup.class);
-        startActivity(i);
 
-    }
 
 }
 

@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/crowdm"
+        android:src="@drawable/rock"
         android:scaleType="centerCrop"/>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:layout_height="30dp"
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
-        android:text="Admin lodin"
+        android:text="Admin login"
         android:textColor="#fff"
         android:id="@+id/admin_btn"/>
     <Button
@@ -51,7 +51,7 @@
         android:layout_height="30dp"
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
-        android:text="User lodin"
+        android:text="User login"
         android:textColor="#fff"
         android:id="@+id/user_btn"
         android:layout_below="@id/admin_btn"
