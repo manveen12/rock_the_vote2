@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#7e7a72"
+    tools:context="com.example.admin.myapplication.Update_profile">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="UPDATE PROFILE"
+    android:textColor="#eaefee"
+    android:layout_centerHorizontal="true"
+    android:textSize="40dp"
+    android:id="@+id/update"
+    android:textStyle="bold"
+    android:layout_margin="10dp"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/update"
+       android:text="Name:"
+       android:textSize="30dp"
+       android:id="@+id/name"
+       android:layout_margin="10dp"
+       />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_below="@+id/name"
+        android:layout_margin="10dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle"
+        android:textColor="#fff"
+        android:id="@+id/edit_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_name"
+        android:text="Email Id:"
+        android:textSize="30dp"
+        android:id="@+id/email"
+
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_below="@+id/email"
+        android:layout_margin="10dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle"
+        android:textColor="#fff"
+        android:id="@+id/edit_email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_email"
+        android:text="Age:"
+        android:textSize="30dp"
+        android:id="@+id/age"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_below="@+id/edit_email"
+        android:layout_margin="10dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle"
+        android:textColor="#fff"
+        android:layout_toRightOf="@+id/age"
+        android:id="@+id/edit_age"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_age"
+        android:text="Occupation:"
+        android:textSize="30dp"
+        android:id="@+id/occu"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_below="@+id/edit_age"
+        android:layout_margin="10dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle"
+        android:textColor="#fff"
+        android:layout_toRightOf="@+id/occu"
+        android:id="@+id/edit_occu"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:clickable="true"
+        android:onClick="update"
+        android:textColor="#947469"
+        android:background="#f5f3f3"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/edit_occu"
+        android:layout_marginLeft="140dp"/>
+</RelativeLayout>

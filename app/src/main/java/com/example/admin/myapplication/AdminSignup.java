@@ -75,7 +75,7 @@ public class AdminSignup extends AppCompatActivity {
 
                 System.out.println(jobj);
 
-                JsonObjectRequest jobjreq = new JsonObjectRequest("http://192.168.1.102/rock_the_vote/admin_signup.php",jobj, new Response.Listener<JSONObject>() {
+                JsonObjectRequest jobjreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/admin_signup.php",jobj, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 

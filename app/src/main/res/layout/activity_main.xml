@@ -4,18 +4,55 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+android:background="@drawable/greengradient"
     tools:context="com.example.admin.myapplication.MainActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bb"
+        android:layout_marginTop="40dp"
         android:scaleType="centerCrop"
         android:id="@+id/imageView"
+        android:layout_below="@id/textt"
+        android:layout_centerInParent="true"
         />
 
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock The Vote"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:id="@+id/text1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:text="our vote is our voice"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/textt"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!!"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/text2"
+        android:layout_below="@id/imageView"
+        />
 
 </RelativeLayout>

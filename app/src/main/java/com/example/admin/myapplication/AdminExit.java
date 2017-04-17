@@ -17,7 +17,7 @@ Button homeBox;
             @Override
             public void onClick(View v) {
                 {
-                    Intent i = new Intent(AdminExit.this, MultiUser.class);
+                    Intent i = new Intent(AdminExit.this, HomePage.class);
 
                     startActivity(i);
 

@@ -24,14 +24,18 @@ public class userSignup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signup);
+
         usernameBox = (EditText)findViewById(R.id.user);
         emailBox=(EditText)findViewById(R.id.email);
         passwordBox=(EditText)findViewById(R.id.pass);
         cpasswordBox=(EditText) findViewById(R.id.cpass);
-        buttonBox=(Button)findViewById(R.id.register);
+        buttonBox=(Button)findViewById(R.id.register_btn);
+
         View.OnClickListener btn_click = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 String name =usernameBox.getText().toString();
                 String email=emailBox.getText().toString();
                 String password=passwordBox.getText().toString();
@@ -73,15 +77,36 @@ public class userSignup extends AppCompatActivity {
                 }
 
                 System.out.println(jobj);
-                JsonObjectRequest jobjreq = new JsonObjectRequest("http://192.168.1.102/rock_the_vote/user_signup.php",jobj, new Response.Listener<JSONObject>() {
+                JsonObjectRequest jobjreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/user_signup.php",jobj, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+
+                        try {
+                            if(response.getString("key").equals("0"))
+                            {
+                                Toast.makeText(userSignup.this ,"email already exist" , Toast.LENGTH_SHORT).show();
+
+                            }
+                            else if(response.getString("key").equals("1")) {
+                                Toast.makeText(userSignup.this ,"done" , Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            else {
+                                Toast.makeText(userSignup.this ,"error" , Toast.LENGTH_SHORT).show();
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
 
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
+                        System.out.println(error);
                     }
                 });
 
@@ -90,6 +115,8 @@ public class userSignup extends AppCompatActivity {
                 app.addToRequestQueue(jobjreq);
             }
         };
+
+
         buttonBox.setOnClickListener(btn_click);
     }
 }

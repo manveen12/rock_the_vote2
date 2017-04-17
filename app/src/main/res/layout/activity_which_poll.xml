@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_admin_options"
+    android:id="@+id/activity_which_poll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/gradient"
-    tools:context="com.example.admin.myapplication.AdminOptions">
+   android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context="com.example.admin.myapplication.Which_poll">
 
 
     <TextView
@@ -30,36 +31,36 @@ android:background="@drawable/gradient"
         android:id="@+id/textt"
         />
 
-
-    <Button
+    <TextView
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonrec"
+        android:layout_height="60dp"
+        android:text=" Opinion Poll"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
         android:layout_centerInParent="true"
-        android:text="Add poll"
-        android:textColor="#000"
-        android:id="@+id/addpoll"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonrec"
-        android:layout_centerInParent="true"
-        android:text="Change setting for poll"
-        android:textColor="#000"
-        android:id="@+id/settingpoll"
-        android:layout_below="@id/addpoll"
+        android:textColor="#fff"
+        android:textSize="30dp"
         android:layout_margin="20dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/txt1"
+        android:clickable="true"
+        android:onClick="open_opinion_poll"
         />
-    <Button
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
-    android:background="@drawable/buttonrec"
-    android:layout_centerInParent="true"
-    android:text="go to home page"
-    android:textColor="#000"
-    android:id="@+id/home_btn"
-    android:layout_below="@id/settingpoll"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Candidate Poll"
+        android:background="@drawable/rectangle"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/txt1"
+        android:clickable="true"
+        android:onClick="open_candidate_poll"
+        android:layout_gravity="center_vertical"/>
 </RelativeLayout>
-
-

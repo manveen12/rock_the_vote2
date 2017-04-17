@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_add_poll"
+    tools:context="com.example.admin.myapplication.AddPoll"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/rock"
-    tools:context="com.example.admin.myapplication.AddPoll">
+    android:layout_height="match_parent">
+
+
 <RelativeLayout
+
+android:id="@+id/activity_add_poll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a216251a">
+    android:background="@drawable/gg">
 
-</RelativeLayout>
 
-    <TextView
+
+
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD POLL"
-        android:textSize="50dp"
-        android:textColor="#5ddfd0"
+        android:text="CANDIDATE POLL"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
         android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
         android:id="@+id/addpoll"/>
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Poll Name"
+        android:text="Poll Details"
         android:textSize="20dp"
         android:textColor="#f7efef"
         android:layout_margin="10dp"
@@ -41,33 +48,77 @@
         android:layout_below="@id/addpoll1"/>
     <EditText
         android:layout_width="250dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
         android:layout_toRightOf="@+id/addpoll2"
         android:layout_below="@id/addpoll1"
         android:background="@drawable/rectangle"
         android:layout_marginTop="10dp"
-        android:id="@+id/name"
+        android:id="@+id/details_et"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Polling Date"
+        android:textSize="20dp"
+        android:textColor="#f7efef"
+        android:layout_margin="10dp"
+        android:id="@+id/addpoll3"
+        android:layout_below="@id/details_et"/>
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/addpoll3"
+        android:layout_below="@id/details_et"
+        android:background="@drawable/rectangle"
+        android:padding="10dp"
+        android:onClick="open_calender"
+        android:editable="false"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addpoll4"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="question"
+        android:text="Polling Time"
         android:textSize="20dp"
-        android:textColor="#fcf9f9"
+        android:textColor="#f7efef"
         android:layout_margin="10dp"
-        android:id="@+id/addques"
-        android:layout_below="@id/addpoll2"/>
+        android:id="@+id/txt"
+        android:layout_below="@id/addpoll4"/>
     <EditText
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_toRightOf="@+id/addques"
-        android:layout_below="@id/name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt"
+        android:layout_below="@id/addpoll4"
         android:background="@drawable/rectangle"
+android:padding="5dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/ques"
-        android:layout_marginLeft="15dp"
+        android:id="@+id/addpoll5"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
 
+        android:textSize="20dp"
+        android:textColor="#f7efef"
+        android:layout_margin="10dp"
+        android:id="@+id/txt1"
+        android:layout_below="@id/addpoll4"
+        android:layout_toRightOf="@id/addpoll5"/>
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt1"
+        android:layout_below="@id/addpoll4"
+        android:background="@drawable/rectangle"
+android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addpoll6"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,14 +127,14 @@
         android:textColor="#fdfbfb"
         android:layout_marginTop="40dp"
         android:id="@+id/option"
-        android:layout_below="@id/ques"
+        android:layout_below="@id/addpoll5"
         android:layout_marginLeft="10dp"
         />
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/relative"
-        android:background="@drawable/rectangle"
+        android:background="@drawable/buttonrec"
         android:layout_below="@+id/option"
         android:layout_margin="20dp"
         android:layout_centerInParent="true"
@@ -92,6 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/chk1"
+
             android:layout_margin="10dp"
             />
         <EditText
@@ -101,6 +153,8 @@
             android:background="@drawable/rectangle"
             android:layout_margin="15dp"
             android:id="@+id/edit1"
+            android:paddingLeft="5dp"
+
             />
 
         <CheckBox
@@ -113,6 +167,7 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:layout_toRightOf="@+id/chk2"
             android:layout_below="@+id/edit1"
             android:background="@drawable/rectangle"
@@ -133,7 +188,8 @@
             android:layout_below="@+id/edit2"
             android:background="@drawable/rectangle"
             android:layout_margin="15dp"
-            android:id="@+id/edit4"
+           android:paddingLeft="5dp"
+            android:id="@+id/edit3"
             />
         <CheckBox
             android:layout_width="wrap_content"
@@ -146,9 +202,11 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/chk4"
-            android:layout_below="@+id/edit4"
+            android:layout_below="@+id/edit3"
             android:background="@drawable/rectangle"
             android:layout_margin="15dp"
+            android:id="@+id/edit4"
+            android:paddingLeft="5dp"
             />
     </RelativeLayout>
 
@@ -159,5 +217,7 @@
         android:id="@+id/submit"
         android:background="@drawable/rectangle"
         android:text="submit"
-        android:layout_below="@+id/relative"/>
+        android:layout_below="@+id/relative"
+        android:onClick="add_poll"/>
 </RelativeLayout>
+</ScrollView>

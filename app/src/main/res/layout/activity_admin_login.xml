@@ -10,22 +10,17 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/rock"
+        android:src="@drawable/gradient1"
         android:scaleType="centerCrop"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#a2262625">
 
-    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rock The Vote"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:textSize="40dp"
-        android:textColor="#5ddfd0"
+        android:textColor="#34739c"
         android:layout_centerHorizontal="true"
         android:layout_margin="40dp"
         android:id="@+id/text1"
@@ -34,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text1"
-        android:text="your vote is your voice"
-        android:textColor="#fff"
+        android:text="our vote is our voice"
+        android:textColor="#34739c"
         android:textSize="20dp"
         android:layout_centerInParent="true"
         android:id="@+id/textt"
@@ -46,30 +41,36 @@
         android:layout_height="30dp"
         android:hint="email address"
         android:gravity="center"
-        android:textColorHint="#000"
+        android:textColorHint="#686464"
+        android:textColor="#000"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonrec"
         android:id="@+id/edit1"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/textt"/>
+        android:layout_below="@id/textt"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"/>
     <EditText
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:gravity="center"
         android:hint="password"
-        android:textColorHint="#000"
+        android:textColor="#000"
+        android:textColorHint="#686464"
         android:layout_centerInParent="true"
         android:background="@drawable/buttonrec"
         android:layout_below="@id/edit1"
         android:layout_marginTop="20dp"
-        android:id="@+id/edit2"/>
+        android:id="@+id/edit2"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
         android:text=" login"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:id="@+id/login_btn"
         android:layout_below="@+id/edit2"
         android:layout_margin="40dp"
@@ -81,7 +82,7 @@
         android:layout_centerInParent="true"
         android:text="no account yet?click to create."
         android:textSize="20dp"
-        android:textColor="#5ddfd0"
+        android:textColor="#34739c"
         android:id="@+id/register_btn"
         android:layout_below="@id/login_btn"
         android:clickable="true"

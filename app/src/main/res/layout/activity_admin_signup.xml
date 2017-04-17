@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
     android:id="@+id/activity_admin_signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/rock"
+android:background="@drawable/gradient"
     tools:context="com.example.admin.myapplication.AdminSignup">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#a216251a">
 
-    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rock The Vote"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:textSize="40dp"
-        android:textColor="#5ddfd0"
+        android:textColor="#fff"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:id="@+id/text1"
@@ -27,7 +27,7 @@ android:background="@drawable/rock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text1"
-        android:text="your vote is your voice"
+        android:text="our vote is our voice"
         android:textColor="#fff"
         android:textSize="20dp"
         android:layout_centerInParent="true"
@@ -39,10 +39,13 @@ android:background="@drawable/rock"
         android:layout_height="30dp"
         android:hint="username"
         android:gravity="center"
+        android:textColor="#000"
         android:textColorHint="#000"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonrec"
         android:id="@+id/user"
+        android:inputType="text"
+        android:imeOptions="actionNext"
         android:layout_marginTop="30dp"
         android:layout_below="@id/textt"/>
     <EditText
@@ -50,6 +53,9 @@ android:background="@drawable/rock"
         android:layout_height="30dp"
         android:hint="email address"
         android:gravity="center"
+        android:textColor="#000"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
         android:textColorHint="#000"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonrec"
@@ -60,6 +66,9 @@ android:background="@drawable/rock"
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:hint="password"
+        android:textColor="#000"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
         android:gravity="center"
         android:textColorHint="#000"
         android:layout_centerHorizontal="true"
@@ -73,11 +82,13 @@ android:background="@drawable/rock"
         android:hint="confirm password"
         android:gravity="center"
         android:textColorHint="#000"
+        android:textColor="#000"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonrec"
         android:id="@+id/cpass"
         android:layout_below="@id/pass"
-
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
         android:layout_marginTop="50dp"/>
     <Button
         android:layout_width="250dp"
@@ -87,6 +98,8 @@ android:background="@drawable/rock"
         android:layout_centerInParent="true"
         android:id="@+id/register"
         android:text="Register"
+
         android:textColor="#fff"
         android:layout_margin="40dp"/>
 </RelativeLayout>
+    </ScrollView>

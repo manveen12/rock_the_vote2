@@ -1,6 +1,7 @@
 package com.example.admin.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +36,7 @@ public class AdminLogin extends AppCompatActivity {
 
 
     public void login(View v) {
-        String email = userNameBox.getText().toString();
+        final String email = userNameBox.getText().toString();
 
         String password = passwordBox.getText().toString();
 
@@ -57,7 +58,7 @@ public class AdminLogin extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jobjreq = new JsonObjectRequest("http://192.168.0.44/rock_the_vote/admin_login.php", job,
+        JsonObjectRequest jobjreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/admin_login.php", job,
 
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -65,6 +66,13 @@ public class AdminLogin extends AppCompatActivity {
 
                         try {
                             if (response.getString("key").equals("done")) {
+
+                                // code to save value through out app
+
+                                SharedPreferences.Editor sp = getSharedPreferences("user_info" , MODE_PRIVATE).edit();
+                                sp.putString("type_key" , "admin");
+                                sp.putString("email" , email);
+                                sp.commit();
 
                                     Intent i = new Intent(AdminLogin.this, AdminOptions.class);
                                     startActivity(i);
