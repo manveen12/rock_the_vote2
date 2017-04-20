@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#7e7a72"
+    android:background="#859fa3"
     tools:context="com.example.admin.myapplication.Update_profile">
 <TextView
     android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
     android:textSize="40dp"
     android:id="@+id/update"
     android:textStyle="bold"
-    android:layout_margin="10dp"/>
+    android:layout_margin="5dp"/>
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -88,13 +88,13 @@
         />
     <EditText
         android:layout_width="350dp"
-        android:layout_below="@+id/edit_age"
+        android:layout_below="@+id/occu"
         android:layout_margin="10dp"
         android:layout_height="50dp"
         android:padding="10dp"
         android:background="@drawable/rectangle"
         android:textColor="#fff"
-        android:layout_toRightOf="@+id/occu"
+
         android:id="@+id/edit_occu"/>
 
     <Button
@@ -105,7 +105,7 @@
         android:onClick="update"
         android:textColor="#947469"
         android:background="#f5f3f3"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/edit_occu"
         android:layout_marginLeft="140dp"/>
 </RelativeLayout>

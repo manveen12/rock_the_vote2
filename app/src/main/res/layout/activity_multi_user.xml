@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/black"
+        android:src="#b7e6e9"
         android:scaleType="centerCrop"/>
 
     <TextView
@@ -18,7 +18,7 @@
         android:text="Rock The Vote"
         android:textStyle="bold"
         android:textSize="40dp"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:layout_centerHorizontal="true"
         android:layout_margin="40dp"
         android:id="@+id/text1"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text1"
         android:text="our vote is our voice"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:textSize="20dp"
         android:layout_centerInParent="true"
         />
@@ -38,7 +38,7 @@
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
         android:text="Admin login"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:id="@+id/admin_btn"/>
     <Button
         android:layout_width="300dp"
@@ -46,7 +46,7 @@
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
         android:text="User login"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:id="@+id/user_btn"
         android:layout_below="@id/admin_btn"
         android:layout_margin="30dp"/>
@@ -57,7 +57,7 @@
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"
         android:text="view results"
-        android:textColor="#fff"
+        android:textColor="#34739c"
         android:id="@+id/result_btn"
         android:layout_below="@id/user_btn"/>
 </RelativeLayout>

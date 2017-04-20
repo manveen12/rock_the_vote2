@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="#d4c5c5"
+            android:background="#b7e6e9"
             >
 
             <ImageView
@@ -79,7 +79,7 @@
             android:text="HOME"
             android:onClick="openhome"
             android:layout_weight="1"
-            android:background="#d6955f"
+            android:background="#97948e"
             android:textColor="#fff"/>
 
         <Button
@@ -88,7 +88,7 @@
             android:text="VOTE"
             android:onClick="openvote"
             android:layout_weight="1"
-            android:background="#d27241"
+            android:background="#877a74"
             android:textColor="#fff"/>
 
         <Button
@@ -97,7 +97,7 @@
             android:text="RESULTS"
             android:onClick="openresults"
             android:layout_weight="1"
-            android:background="#e16c6c"
+            android:background="#493b3b"
             android:textColor="#fff"/>
 
 
@@ -106,6 +106,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#b7e6e9"
         android:layout_below="@+id/button_lay_id"
         android:id="@+id/frame_id">
 
@@ -117,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:background="#328780">
+        android:background="#847e7e">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -125,7 +126,7 @@
             android:clickable="true"
             android:onClick="doNothing"
             android:orientation="vertical"
-            android:background="#d4c5c5"
+            android:background="#b7e6e9"
             >
 
 
@@ -135,9 +136,10 @@
             android:text="Rock The Vote"
             android:textStyle="bold"
             android:textSize="30dp"
-
+android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
             android:textColor="#3581a6"
-            android:layout_margin="10dp"
+            android:layout_marginTop="40dp"
             android:id="@+id/text1"
             />
 
@@ -164,11 +166,20 @@
                 android:padding="20dp"
                 />
         </RelativeLayout>
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/log_in"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/linear"
 
+   />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_margin="10dp"
+           android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:text="Logged in as : "
             android:textSize="20dp"
@@ -189,13 +200,25 @@
             android:textColor="#fff"
             android:layout_toRightOf="@+id/logged_in_id"
             android:padding="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/email"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/logged_in_id"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email :"
+            android:text="Email:"
             android:textSize="20dp"
-            android:layout_margin="10dp"
+
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginTop="10dp"
             android:id="@+id/email_text"
             android:layout_below="@+id/logged_in_id"
             android:textColor="#fff"
@@ -204,7 +227,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#94f5a6"
+            android:background="#eef1ef"
             android:layout_below="@id/user_type"
             />
 
@@ -213,25 +236,40 @@
             android:layout_height="wrap_content"
             android:text="email"
             android:textSize="20dp"
-            android:textStyle="bold"
+            android:textStyle="normal"
             android:id="@+id/user_email"
             android:textColor="#fff"
-            android:layout_marginTop="10dp"
+           android:layout_marginTop="20dp"
+            android:gravity="center"
+android:paddingBottom="10dp"
             android:layout_below="@+id/user_type"
             android:layout_toRightOf="@+id/email_text"
-            android:padding="10dp"/>
+            />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#94f5a6"
+            android:background="#fcf5f5"
             android:layout_below="@id/user_email"
             />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/update"
+            android:layout_margin="10dp"
+
+            android:layout_below="@+id/email_text"
+
+            />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Update Profile"
             android:textSize="20dp"
-            android:layout_margin="10dp"
+           android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/update_profile"
             android:textColor="#fff"
             android:layout_below="@+id/email_text"
@@ -241,8 +279,17 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#94f5a6"
+            android:background="#f5f5f5"
             android:layout_below="@id/update_profile"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sharee"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/update_profile"
+
             />
         <TextView
             android:layout_width="wrap_content"
@@ -251,7 +298,9 @@
             android:textSize="20dp"
             android:id="@+id/share"
             android:textColor="#fff"
-            android:layout_margin="10dp"
+           android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="10dp"
             android:layout_below="@+id/update_profile"
            android:onClick="share"
             android:clickable="true"
@@ -259,15 +308,25 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#94f5a6"
+            android:background="#f8f9f8"
             android:layout_below="@id/share"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rating"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/share"
+
             />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Rate this App"
     android:textColor="#fff"
-    android:layout_margin="10dp"
+   android:layout_marginTop="10dp"
+    android:layout_marginLeft="45dp"
+    android:layout_marginBottom="10dp"
     android:id="@+id/rate"
     android:textSize="20dp"
     android:clickable="true"
@@ -278,19 +337,29 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#94f5a6"
+            android:background="#efefef"
             android:layout_below="@id/rate"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logoutt"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/rate"
+
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log out "
-            android:layout_margin="10dp"
+           android:layout_marginBottom="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/log_out"
             android:textSize="20dp"
             android:textColor="#fff"
             android:layout_below="@+id/rate"
-            android:onClick="share"
+            android:onClick="log_out"
             android:clickable="true"
             android:padding="10dp"/>
 

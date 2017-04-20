@@ -39,7 +39,7 @@ public class HomePage extends AppCompatActivity {
 
         String type = sp.getString("type_key" , "");
 
-        // setting text to user text in side oprtion pane
+        // setting text to user text in side option pane
         user_email.setText(email);
 
         user_type.setText(type);
@@ -49,8 +49,6 @@ public class HomePage extends AppCompatActivity {
 
     public void openhome(View v)
     {
-
-
 
         FragmentTransaction ft = fm.beginTransaction();
         Fragment home_frag = new home_fragment();
@@ -106,5 +104,11 @@ public  void update_profile(View v)
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+    public void rate(View v){
+
+    }
+    public void log_out (View v){
+
     }
 }

@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/gradient1"
+        android:src="#b7e6e9"
         android:scaleType="centerCrop"/>
 
     <TextView

@@ -5,5 +5,5 @@ package com.example.admin.myapplication;
  */
 
 public class Ipadress {
-    public static String ip ="192.168.0.52";
+    public static String ip ="192.168.0.42";
 }
