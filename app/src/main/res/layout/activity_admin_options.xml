@@ -40,26 +40,17 @@ android:background="#b7e6e9"
         android:textColor="#34739c"
         android:id="@+id/addpoll"
         />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonrec"
-        android:layout_centerInParent="true"
-        android:text="Change setting for poll"
-        android:textColor="#34739c"
-        android:id="@+id/settingpoll"
-        android:layout_below="@id/addpoll"
-        android:layout_margin="20dp"
-        />
+
     <Button
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:background="@drawable/buttonrec"
     android:layout_centerInParent="true"
     android:text="go to home page"
+        android:layout_margin="20dp"
     android:textColor="#34739c"
     android:id="@+id/home_btn"
-    android:layout_below="@id/settingpoll"/>
+    android:layout_below="@id/addpoll"/>
 </RelativeLayout>
 
 

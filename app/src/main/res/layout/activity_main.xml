@@ -4,13 +4,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#b7e6e9"
+android:background="@drawable/main"
     tools:context="com.example.admin.myapplication.MainActivity">
 
     <ImageView
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:src="@drawable/bb"
+        android:src="@drawable/poll"
+
         android:layout_marginTop="40dp"
         android:scaleType="centerCrop"
         android:id="@+id/imageView"

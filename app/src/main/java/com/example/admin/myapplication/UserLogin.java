@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +45,10 @@ public class UserLogin extends AppCompatActivity {
             Toast.makeText(UserLogin.this, "please enter your email", Toast.LENGTH_SHORT).show();
             return;
         }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(UserLogin.this, "please enter valid email", Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (password.equals("")) {
             Toast.makeText(UserLogin.this, "please enter your password", Toast.LENGTH_SHORT).show();
             return;
@@ -80,7 +85,7 @@ public class UserLogin extends AppCompatActivity {
 
                             } else
                             {
-                                Toast.makeText(UserLogin.this, "error", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UserLogin.this, "password and email does not match", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         } catch (JSONException e) {
@@ -104,6 +109,11 @@ public class UserLogin extends AppCompatActivity {
     }
     public void opensignup(View v) {
         Intent i = new Intent(UserLogin.this, userSignup.class);
+        startActivity(i);
+
+    }
+    public void forget(View v) {
+        Intent i = new Intent(UserLogin.this, user_forget_password.class);
         startActivity(i);
 
     }

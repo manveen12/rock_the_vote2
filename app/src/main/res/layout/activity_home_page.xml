@@ -170,15 +170,17 @@ android:layout_marginLeft="10dp"
     android:layout_width="40dp"
     android:layout_height="40dp"
     android:src="@drawable/log_in"
-    android:layout_marginTop="10dp"
+
+   android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
     android:layout_below="@+id/linear"
 
    />
 
         <TextView
             android:layout_width="wrap_content"
-           android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
+           android:layout_marginLeft="45dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:text="Logged in as : "
@@ -192,6 +194,7 @@ android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="user type"
+
             android:layout_margin="10dp"
            android:textSize="20dp"
             android:layout_below="@id/linear"
@@ -204,7 +207,7 @@ android:layout_marginLeft="10dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/email"
-            android:layout_margin="10dp"
+           android:layout_marginLeft="10dp"
             android:layout_below="@+id/logged_in_id"
 
             />
@@ -282,13 +285,41 @@ android:paddingBottom="10dp"
             android:background="#f5f5f5"
             android:layout_below="@id/update_profile"
             />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/padlock"
+            android:layout_margin="10dp"
 
+            android:layout_below="@+id/update_profile"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password "
+            android:textSize="20dp"
+            android:id="@+id/pass"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/update_profile"
+            android:onClick="change_pass"
+            android:clickable="true"
+            android:padding="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            android:layout_below="@id/pass"
+            />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/sharee"
             android:layout_margin="10dp"
-            android:layout_below="@+id/update_profile"
+            android:layout_below="@+id/pass"
 
             />
         <TextView
@@ -301,7 +332,7 @@ android:paddingBottom="10dp"
            android:layout_marginTop="10dp"
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="10dp"
-            android:layout_below="@+id/update_profile"
+            android:layout_below="@+id/pass"
            android:onClick="share"
             android:clickable="true"
             android:padding="10dp"/>

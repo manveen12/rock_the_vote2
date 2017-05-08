@@ -48,7 +48,7 @@ public class Update_profile extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + Ipadress.ip + "/rock_the_vote/get_data.php", jobj, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/get_data.php", jobj, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -59,7 +59,7 @@ public class Update_profile extends AppCompatActivity {
 
                     JSONObject job_box = (JSONObject) jarr.get(0);
                     email_et.setText(job_box.getString("email"));
-                    name_et.setText(job_box.getString("name"));
+                    name_et.setText(job_box.getString("username"));
                     age_et.setText(job_box.getString("age"));
                     occu_et.setText(job_box.getString("occupation"));
 

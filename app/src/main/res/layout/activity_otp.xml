@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_otp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="#b7e6e9"
+    tools:context="com.example.admin.myapplication.otp">
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:hint="enter OTP"
+        android:gravity="center"
+        android:textColorHint="#686464"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonrec"
+        android:id="@+id/edit2"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/edit1"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectangle"
+        android:layout_below="@id/edit2"
+        android:layout_centerInParent="true"
+        android:id="@+id/register"
+        android:text="verify"
+        android:onClick="verify_otp"
+        android:textColor="#34739c"
+        android:layout_margin="40dp"/>
+</RelativeLayout>

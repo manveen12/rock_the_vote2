@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comment_vote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b7e6e9"
+    tools:context="com.example.admin.myapplication.comment_vote">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#585353">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/box"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/arrow"
+            android:text="Comments"
+            android:textSize="30dp" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerr_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative"
+        android:layout_above="@+id/bottom_lay">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_lay"
+        android:background="#fff">
+
+        <EditText
+            android:id="@+id/write_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:hint="write comment here......"
+            android:layout_toLeftOf="@+id/send_comment"
+            android:imeOptions="actionDone"
+            android:layout_centerVertical="true"
+            android:inputType="text"
+            android:padding="3dp"
+            android:textColor="#000"
+            android:textColorHint="#8e8d8d" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:id="@+id/send_comment"
+            android:onClick="post_comment"
+            android:padding="5dp"
+            android:text="post"
+            android:textColor="#fff" />
+    </RelativeLayout>
+</RelativeLayout>

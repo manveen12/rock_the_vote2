@@ -20,7 +20,7 @@ public class AdminOptions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 {
-                    Intent i = new Intent(AdminOptions.this, Which_poll.class);
+                    Intent i = new Intent(AdminOptions.this, AddPoll.class);
 
                     startActivity(i);
 
@@ -35,22 +35,6 @@ public class AdminOptions extends AppCompatActivity {
         addpollBox.setOnClickListener(btclick);
 
 
-        changepollBox = (Button) findViewById(R.id.settingpoll);
-        View.OnClickListener btclick1 = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                {
-                    Intent i = new Intent(AdminOptions.this, Which_poll.class);
-
-                    startActivity(i);
-
-
-                }
-
-            }
-
-        };
-        changepollBox.setOnClickListener(btclick1);
 
         homeBox = (Button) findViewById(R.id.home_btn);
         View.OnClickListener btclick2 = new View.OnClickListener() {

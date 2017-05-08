@@ -3,6 +3,7 @@ package com.example.admin.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,9 +43,12 @@ public class AdminSignup extends AppCompatActivity {
                     Toast.makeText(AdminSignup.this,"please enter name",Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 if (email.equals("")) {
                     Toast.makeText(AdminSignup.this, "please enter email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Toast.makeText(AdminSignup.this, "please enter valid email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -88,6 +92,10 @@ public class AdminSignup extends AppCompatActivity {
                             else if(response.getString("key").equals("1")) {
                                 Toast.makeText(AdminSignup.this ,"done" , Toast.LENGTH_SHORT).show();
 
+                                Intent i = new Intent(AdminSignup.this, AdminLogin.class);
+
+                                startActivity(i);
+                                   finish();
                             }
 
                             else {

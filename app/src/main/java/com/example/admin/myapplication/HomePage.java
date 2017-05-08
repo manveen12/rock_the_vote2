@@ -2,6 +2,7 @@ package com.example.admin.myapplication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -106,9 +107,23 @@ public  void update_profile(View v)
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
     public void rate(View v){
+           try {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("market://details?id=" + this.getPackageName())));
+            } catch (android.content.ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+            }
+        }
 
-    }
     public void log_out (View v){
-
+        Intent intent = new Intent(HomePage.this, MultiUser.class);
+        startActivity(intent);
+        finish();
+    }
+    public void change_pass (View v){
+        Intent intent = new Intent(HomePage.this, password_homepage.class);
+        startActivity(intent);
+        finish();
     }
 }

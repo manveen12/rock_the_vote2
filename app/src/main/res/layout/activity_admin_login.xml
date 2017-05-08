@@ -87,4 +87,17 @@
         android:layout_below="@id/login_btn"
         android:clickable="true"
         android:onClick="opensignup"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:text="Forget Password?"
+        android:layout_centerInParent="true"
+        android:textColor="#34739c"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:onClick="forget"
+        android:clickable="true"
+        
+        />
 </RelativeLayout>

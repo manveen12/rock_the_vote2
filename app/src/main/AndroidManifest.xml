@@ -17,19 +17,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MultiUser" />
-        <activity android:name=".AdminLogin" />
-        <activity android:name=".AdminSignup" />
-        <activity android:name=".AdminOptions" />
-        <activity android:name=".AddPoll" />
-        <activity android:name=".AdminExit" />
-        <activity android:name=".UserLogin" />
-        <activity android:name=".userSignup" />
-        <activity android:name=".ViewResult" />
-        <activity android:name=".HomePage" />
-        <activity android:name=".Which_poll" />
-        <activity android:name=".opinion_poll" />
-        <activity android:name=".Update_profile"></activity>
+        <activity
+            android:name=".MultiUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddPoll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminExit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".userSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Update_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cast_vote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".comment_vote"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vote_done"
+            android:screenOrientation="portrait" />
+        <activity android:name=".forget_password" />
+        <activity android:name=".change_password" />
+        <activity android:name=".otp" />
+        <activity android:name=".user_forget_password" />
+        <activity android:name=".user_otp" />
+        <activity android:name=".user_change_password" />
+        <activity android:name=".password_homepage"></activity>
     </application>
 
 </manifest>

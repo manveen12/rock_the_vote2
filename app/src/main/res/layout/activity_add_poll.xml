@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.admin.myapplication.AddPoll"
-
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
 <RelativeLayout
@@ -21,7 +21,7 @@ android:id="@+id/activity_add_poll"
 <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CANDIDATE POLL"
+        android:text="ADD POLL"
         android:textSize="40dp"
         android:textStyle="bold"
         android:textColor="#fff"
@@ -40,14 +40,14 @@ android:id="@+id/activity_add_poll"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Poll Details"
+        android:text="Poll Question"
         android:textSize="20dp"
         android:textColor="#f7efef"
         android:layout_margin="10dp"
         android:id="@+id/addpoll2"
         android:layout_below="@id/addpoll1"/>
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
 
         android:padding="10dp"
@@ -61,14 +61,14 @@ android:id="@+id/activity_add_poll"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Polling Date"
+        android:text="Polling Date  "
         android:textSize="20dp"
         android:textColor="#f7efef"
         android:layout_margin="10dp"
         android:id="@+id/addpoll3"
         android:layout_below="@id/details_et"/>
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/addpoll3"
         android:layout_below="@id/details_et"
@@ -82,7 +82,7 @@ android:id="@+id/activity_add_poll"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Polling Time"
+        android:text="Polling Time  "
         android:textSize="20dp"
         android:textColor="#f7efef"
         android:layout_margin="10dp"
@@ -92,6 +92,9 @@ android:id="@+id/activity_add_poll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/txt"
+        android:onClick="from"
+        android:editable="false"
+        android:clickable="true"
         android:layout_below="@id/addpoll4"
         android:background="@drawable/rectangle"
 android:padding="5dp"
@@ -115,6 +118,9 @@ android:padding="5dp"
         android:layout_toRightOf="@id/txt1"
         android:layout_below="@id/addpoll4"
         android:background="@drawable/rectangle"
+        android:onClick="to"
+        android:editable="false"
+        android:clickable="true"
 android:padding="5dp"
         android:layout_marginTop="10dp"
         android:id="@+id/addpoll6"
@@ -122,102 +128,131 @@ android:padding="5dp"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fill options:"
+        android:text="Poll Type"
         android:textSize="20dp"
-        android:textColor="#fdfbfb"
-        android:layout_marginTop="40dp"
-        android:id="@+id/option"
-        android:layout_below="@id/addpoll5"
-        android:layout_marginLeft="10dp"
-        />
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/relative"
-        android:background="@drawable/buttonrec"
-        android:layout_below="@+id/option"
-        android:layout_margin="20dp"
-        android:layout_centerInParent="true"
-        >
-        <CheckBox
+        android:textColor="#f7efef"
+        android:layout_margin="10dp"
+        android:id="@+id/type"
+        android:layout_below="@id/txt"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/radio_grp"
+        android:layout_below="@+id/type"
+        android:layout_height="wrap_content">
+
+        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/chk1"
-
-            android:layout_margin="10dp"
-            />
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/chk1"
-            android:background="@drawable/rectangle"
-            android:layout_margin="15dp"
-            android:id="@+id/edit1"
-            android:paddingLeft="5dp"
-
-            />
-
-        <CheckBox
+            android:layout_weight="1"
+            android:id="@+id/radio1"
+            android:layout_marginLeft="30dp"
+            android:text="Opinion"/>
+        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/chk2"
-            android:layout_below="@id/chk1"
-            android:layout_margin="10dp"
-            />
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:layout_toRightOf="@+id/chk2"
-            android:layout_below="@+id/edit1"
-            android:background="@drawable/rectangle"
-            android:layout_margin="15dp"
-            android:id="@+id/edit2"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chk3"
-            android:layout_below="@id/chk2"
-            android:layout_margin="10dp"
-            />
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/chk3"
-            android:layout_below="@+id/edit2"
-            android:background="@drawable/rectangle"
-            android:layout_margin="15dp"
-           android:paddingLeft="5dp"
-            android:id="@+id/edit3"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chk4"
-            android:layout_below="@id/chk3"
-            android:layout_margin="10dp"
-            />
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/chk4"
-            android:layout_below="@+id/edit3"
-            android:background="@drawable/rectangle"
-            android:layout_margin="15dp"
-            android:id="@+id/edit4"
-            android:paddingLeft="5dp"
-            />
-    </RelativeLayout>
-
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="candidate"
+            android:id="@+id/radio2"
+            android:text="Candidate"/>
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:id="@+id/submit"
+        android:layout_margin="10dp"
         android:background="@drawable/rectangle"
         android:text="submit"
-        android:layout_below="@+id/relative"
+        android:layout_below="@+id/radio_grp"
         android:onClick="add_poll"/>
-</RelativeLayout>
-</ScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="bottom"
+        android:background="#b1b6b6">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill Candidate names :"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+
+            android:textColor="#fdfbfb"
+            android:id="@+id/option"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative"
+            android:background="@drawable/buttonrec"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/option"
+            android:layout_marginBottom="20dp"
+            >
+
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:background="@drawable/rectangle"
+                android:layout_margin="15dp"
+                android:id="@+id/edit1"
+                android:padding="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:layout_below="@+id/edit1"
+                android:background="@drawable/rectangle"
+                android:layout_margin="15dp"
+                android:id="@+id/edit2"
+                />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_below="@+id/edit2"
+                android:background="@drawable/rectangle"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:id="@+id/edit3"
+                />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_below="@+id/edit3"
+                android:background="@drawable/rectangle"
+                android:layout_margin="15dp"
+                android:id="@+id/edit4"
+                android:padding="10dp"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

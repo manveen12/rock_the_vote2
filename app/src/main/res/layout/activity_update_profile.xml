@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#859fa3"
+    android:background="#818d9cb3"
     tools:context="com.example.admin.myapplication.Update_profile">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@drawable/rectangle"
+     android:layout_alignParentEnd="true">
+
+
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -108,4 +115,5 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/edit_occu"
         android:layout_marginLeft="140dp"/>
+ </RelativeLayout>
 </RelativeLayout>
