@@ -57,6 +57,8 @@ EditText passwordBox,confirmpasswordBox;
             e.printStackTrace();
         }
 
+        System.out.println(job);
+
         JsonObjectRequest jobjreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/update_admin_pass.php", job,
 
                 new Response.Listener<JSONObject>() {

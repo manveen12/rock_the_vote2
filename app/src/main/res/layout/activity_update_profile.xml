@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#818d9cb3"
+    android:background="@drawable/mm"
     tools:context="com.example.admin.myapplication.Update_profile">
  <RelativeLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:background="@drawable/rectangle"
+
      android:layout_alignParentEnd="true">
 
 

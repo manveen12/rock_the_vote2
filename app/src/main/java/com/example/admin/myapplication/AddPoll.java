@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.provider.Telephony;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -92,6 +93,9 @@ public class AddPoll extends AppCompatActivity {
 
         }
 
+        SharedPreferences sp = getSharedPreferences("user_info" , MODE_PRIVATE);
+
+
         JSONObject job = new JSONObject();
 
         try {
@@ -103,6 +107,7 @@ public class AddPoll extends AppCompatActivity {
             job.put("option2" , s_option2);
             job.put("option3", s_option3);
             job.put("option4",s_option4);
+            job.put("aid", sp.getString("admin_id" , ""));
 
             if(radio_1.isChecked())
             {

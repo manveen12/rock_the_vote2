@@ -76,6 +76,7 @@ public class AdminLogin extends AppCompatActivity {
                                 SharedPreferences.Editor sp = getSharedPreferences("user_info" , MODE_PRIVATE).edit();
                                 sp.putString("type_key" , "admin");
                                 sp.putString("email" , email);
+                                sp.putString("admin_id" ,response.getString("admin_id") );
                                 sp.commit();
 
                                     Intent i = new Intent(AdminLogin.this, AdminOptions.class);

@@ -77,6 +77,7 @@ public class UserLogin extends AppCompatActivity {
                                 SharedPreferences.Editor sp = getSharedPreferences("user_info" , MODE_PRIVATE).edit();
                                 sp.putString("type_key" , "user");
                                 sp.putString("email" , email);
+                                sp.putString("user_id" , response.getString("user_id"));
                                 sp.commit();
 
                                 Intent i = new Intent(UserLogin.this, HomePage.class);

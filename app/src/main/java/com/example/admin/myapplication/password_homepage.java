@@ -31,6 +31,7 @@ EditText expasswordBox,passwordBox,confirmpasswordBox;
         final String pass = passwordBox.getText().toString();
 
         String confirm_pass = confirmpasswordBox.getText().toString();
+
         String ex_pass = expasswordBox.getText().toString();
 
         if (ex_pass.equals("")) {
@@ -56,19 +57,22 @@ EditText expasswordBox,passwordBox,confirmpasswordBox;
         String email =  sp.getString("email", "");
 
         try {
-            job.put("password_key", getIntent().getStringExtra("password"));
+            job.put("expassword",ex_pass);
             job.put("password", pass);
             job.put("type",type);
             job.put("email",email);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        System.out.println(job);
 
         JsonObjectRequest jobjreq = new JsonObjectRequest("http://"+Ipadress.ip+"/rock_the_vote/update_pass.php", job,
 
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+
+                        System.out.println(response);
 
                         try {
                             if (response.getString("key").equals("done")) {

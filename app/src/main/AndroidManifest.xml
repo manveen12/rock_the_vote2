@@ -66,7 +66,8 @@
         <activity android:name=".user_forget_password" />
         <activity android:name=".user_otp" />
         <activity android:name=".user_change_password" />
-        <activity android:name=".password_homepage"></activity>
+        <activity android:name=".password_homepage" />
+        <activity android:name=".calculate_result"></activity>
     </application>
 
 </manifest>

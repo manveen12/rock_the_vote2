@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#34739c"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Poll Question"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonrec"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:id="@+id/ques_id"
+        android:layout_margin="10dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3ede5"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Polling Result"
+        android:layout_margin="10dp"
+        android:textSize="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:id="@+id/result_id"
+            android:background="@drawable/buttonrec"
+            />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3ede5"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_margin="10dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:id="@+id/date_id"
+        android:background="@drawable/buttonrec"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#1e201e"
+
+        />
+
+</LinearLayout>

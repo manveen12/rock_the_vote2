@@ -94,6 +94,7 @@ TextView quesBox;
         String type = sp.getString("type_key", "");
         String email = sp.getString("email" , "");
 
+
         String poll_id = getIntent().getStringExtra("poll_id");
 
         JSONObject job = new JSONObject();
@@ -102,6 +103,13 @@ TextView quesBox;
             job.put("email" , email);
             job.put("poll_id",poll_id);
             job.put("answer",answer);
+            if(type.equals("admin"))
+            {
+                job.put("admin_id",sp.getString("admin_id", ""));
+            }
+            else {
+                job.put("user_id",sp.getString("user_id", ""));
+            }
         } catch (JSONException e) {
             e.printStackTrace();
 

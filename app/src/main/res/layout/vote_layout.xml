@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3581a6"
+    android:layout_margin="10dp"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="enter poll number"
+        android:gravity="center"
+        android:textColorHint="#686464"
+        android:textColor="#000"
+
+        android:background="@drawable/buttonrec"
+        android:id="@+id/edit"
+        android:layout_margin="20dp"
+
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint=" enter email address"
+        android:gravity="center"
+        android:textColorHint="#686464"
+        android:textColor="#000"
+
+        android:background="@drawable/buttonrec"
+        android:id="@+id/edit1"
+        android:layout_margin="20dp"
+
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:hint="enter password"
+        android:textColor="#000"
+        android:textColorHint="#686464"
+
+        android:background="@drawable/buttonrec"
+        android:layout_below="@id/edit1"
+        android:layout_margin="20dp"
+        android:id="@+id/edit2"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/rectangle"
+        android:text=" Proceed"
+        android:textColor="#fff"
+        android:id="@+id/login_btn"
+
+        android:layout_margin="40dp"
+        android:onClick="login"
+        />
+    </LinearLayout>
