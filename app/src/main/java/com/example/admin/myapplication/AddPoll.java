@@ -36,7 +36,7 @@ public class AddPoll extends AppCompatActivity {
 
     EditText poll_question_et ,poll_date,poll_time_from,poll_time_to, option1 , option2 , option3 , option4 ;
     RadioButton radio_1,radio_2;
-    String date ;
+    String date,mnth;
     String time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,8 +175,12 @@ public class AddPoll extends AppCompatActivity {
         final DatePickerDialog mDatePicker = new DatePickerDialog(AddPoll.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datepicker, int year, int month, int day) {
+                int newmonth= month +1;
+                if(newmonth<10){
+                    mnth="0"+String.valueOf(newmonth);
+                }
 
-                date = String.valueOf(day) + "/" + String.valueOf(month + 1) + "/" + String.valueOf(year);
+                date = String.valueOf(year) + "/" + String.valueOf(mnth) + "/" + String.valueOf(day);
 
                 poll_date.setText(date);
 
@@ -216,6 +220,7 @@ public class AddPoll extends AppCompatActivity {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay,
                                   int minute) {
+
 
                 poll_time_to.setText(hourOfDay + ":" + minute);
             }
